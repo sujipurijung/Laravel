@@ -16,7 +16,19 @@ body {
 </head>
 <body>
    <div class="container"><center>
-      HELLO
+      HELLO<br>
+
+      <?php echo "session('weight')"; ?>
+      
+      <div>
+        bin: {{session('bin')}}
+      </div>
+
+      <div>
+        count: {{session('count')}}
+      </div>
+
+
    </center></div>
 
 </body>
