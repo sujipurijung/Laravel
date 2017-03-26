@@ -26,21 +26,15 @@ Route::get('/myphoto', function () {
 Route::get('/calculator', function () {
     return view('calculator');
 });
-/*
-Route::get('/showcalculator', function () {
-    return view('showcalculator');
-});*/
+
 Route::get('/show','CalController@index');
 Route::post('/calculate','CalController@calculate');
 Route::get('/showcalculate',function(){
 	return view("showcalculator");
 });
 
-Route::any('/test', function() {
-	Cookie::forget('test2');
-	Cookie::queue(cookie('test2', 'Hello worldddd', 3600));
-	echo Cookie::get('test2');
-});
-
-/*Route::get('/cart','CartController@index');
-Route::get('/cart/orderProduct','CartController@orderProduct');*/
+// Route::any('/test', function() {
+// 	Cookie::forget('test2');
+// 	Cookie::queue(cookie('test2', 'Hello worldddd', 3600));
+// 	echo Cookie::get('test2');
+// });

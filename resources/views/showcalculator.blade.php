@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>TEST</title>
+    <title>ShowCalculate</title>
 
     <style>
 body {
@@ -16,20 +16,20 @@ body {
 </head>
 <body>
    <div class="container"><center>
-      HELLO<br>
-
-      <?php echo "session('weight')"; ?>
+      HELLO<br><br><br>
+      <div>
+        binary: {{session('bin')}} => decimal: {{session('count')}}
+      </div><br><br><br><br><br><br><br><br>
       
-      <div>
-        bin: {{session('bin')}}
-      </div>
-
-      <div>
-        count: {{session('count')}}
-      </div>
-
-
    </center></div>
+   session_binary : {{session('bin')}}<br>
+   session_decimal : {{session('count')}}<br><br>
+   <?php  echo "Cookie_binary : ";echo Cookie::get('bin');
+          echo "<br>Cookie_decimal : ";echo Cookie::get('cookie_dec');
+   ?>
+   <br><br><br><br><br>
+   <a href="calculator"> Previous </a>
+
 
 </body>
 </html>

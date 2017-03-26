@@ -20,13 +20,13 @@ body {
         <h1>โปรแกรมแปลงเลขฐาน 2 เป็นเลขฐาน 10 ^^</h1><br><br>
 
         <form action="calculate" method="post">
-            เลขฐาน 2 เป็นเลขฐาน 10 : <input type="text" name="bin">
+            กรุณาป้อนเลขฐาน 2 : <input type="text" name="bin">
             <input type="submit" />
-            <br><br>
+            <br><br><br><br><br>
         
-            เลขฐาน 10 เป็นเลขฐาน 2 : <input type="text" name="dec"> 
+            <!-- เลขฐาน 10 เป็นเลขฐาน 2 : <input type="text" name="dec"> 
             <input type="submit" />
-            <br><br><br><br>
+            <br><br><br><br> -->
             {{ csrf_field() }}
         </form>
 
