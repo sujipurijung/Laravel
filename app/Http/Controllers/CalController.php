@@ -27,6 +27,7 @@ class CalController extends Controller
             $count += ($bin%10) * pow(2, $i);
             $bin=$bin/10;
         } 
+        var_dump(session()->all());
         session()->put('count',$count);
         //session()->put('bin', $bin);
         Cookie::queue(cookie('cookie_dec',$count,3600));

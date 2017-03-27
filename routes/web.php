@@ -1,16 +1,6 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
+<<<<<<< HEAD
 Route::get('/welcome', function () {
     return view('welcome');
 });
@@ -29,12 +19,38 @@ Route::get('/calculator', function () {
 
 Route::get('/show','CalController@index');
 Route::post('/calculate','CalController@calculate');
+
 Route::get('/showcalculate',function(){
 	return view("showcalculator");
 });
 
-// Route::any('/test', function() {
-// 	Cookie::forget('test2');
-// 	Cookie::queue(cookie('test2', 'Hello worldddd', 3600));
-// 	echo Cookie::get('test2');
-// });
+Route::get('/index','CalculateController@index');
+Route::post('/add','CalculateController@add');
+Route::post('/val','CalculateController@val');
+
+=======
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('/foo', function() { 
+	return view('foo');
+});
+
+Route::get('/example', function() { 
+	return view('example.example')
+			->with('name','John');
+});
+
+Route::get('/example2', function() { 
+	return view('example.example2');
+});
+
+Route::get('/calculator','CalculatorController@index' );
+Route::post('/add','CalculatorController@add');
+Route::post('/val','CalculatorController@val');
+
+Route::get('/cart','CartController@index');
+
+Route::get('/cart/orderProduct','CartController@orderProduct');
+>>>>>>> 7814c2ca6594f3232ed025701c66e886b1325abb

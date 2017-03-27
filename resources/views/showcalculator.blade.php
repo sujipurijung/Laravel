@@ -25,7 +25,8 @@ body {
    session_binary : {{session('bin')}}<br>
    session_decimal : {{session('count')}}<br><br>
    <?php  echo "Cookie_binary : ";echo Cookie::get('bin');
-          echo "<br>Cookie_decimal : ";echo Cookie::get('cookie_dec');
+          echo "<br>Cookie_decimal : <br><br>";echo Cookie::get('cookie_dec'); var_dump(session()->all());
+
    ?>
    <br><br><br><br><br>
    <a href="calculator"> Previous </a>
